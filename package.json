@@ -1,0 +1,37 @@
+{
+  "name": "@gooper7am/task-executor",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "a timing task executor.",
+  "main": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "packageManager": "pnpm@7.5.0",
+  "scripts": {
+    "build": "pnpm run build:type && pnpm run bundle",
+    "build:type": "tsc -b ./tsconfig.types.json",
+    "bundle": "rollup -c",
+    "dev": "pnpm run bundle"
+  },
+  "keywords": [
+    "task executor",
+    "schedule task",
+    "timing task"
+  ],
+  "author": "gooper",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/plugin-external-helpers": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/runtime": "^7.19.4",
+    "@babel/runtime-corejs3": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^3.2.1",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.8.4"
+  }
+}
